@@ -1,0 +1,51 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/refs/heads/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "SunHub", HidePremium = false, SaveConfig = true, ConfigFolder = "SunHub"})
+
+local Tab = Window:MakeTab({
+	Name = "Auto Farm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Candy Auto Farm"
+})
+
+local autoFarmActive = false
+
+Tab:AddToggle({
+	Name = "Auto Farm!",
+	Default = false,
+	Callback = function(Value)
+		autoFarmActive = Value
+
+		if Value == true then
+			while autoFarmActive do
+				local player = game.Players.LocalPlayer.Character.HumanoidRootPart
+				local part = game.Workspace.Scripted.HeartCoins.Active.HeartCoins.Hitbox.Position
+
+				player.CFrame = CFrame.new(part + Vector3.new(0, 5, 0))
+				wait(0.5)
+			end
+		end
+	end
+})
+
+Tab:AddToggle({
+	Name = "Fast Auto Farm!",
+	Default = false,
+	Callback = function(Value)
+		autoFarmActive = Value
+
+		if Value == true then
+			while autoFarmActive do
+				local player = game.Players.LocalPlayer.Character.HumanoidRootPart
+				local part = game.Workspace.Scripted.HeartCoins.Active.HeartCoins.Hitbox.Position
+
+				player.CFrame = CFrame.new(part + Vector3.new(0, 5, 0))
+				wait(0.1)
+			end
+		end
+	end	
+})
