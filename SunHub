@@ -12,19 +12,6 @@ local Section = Tab:AddSection({
 	Name = "Main"
 })
 
-Tab:AddSlider({
-	Name = "Speed",
-	Min = 0,
-	Max = 45,
-	Default = 16,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "Speed",
-	Callback = function(s)
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-	end  
-})
-
 Tab:AddButton({
 	Name = "Infinite Jump!",
 	Default = false,
