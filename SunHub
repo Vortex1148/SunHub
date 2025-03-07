@@ -322,6 +322,28 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
+	Name = "Plant"
+})
+
+Tab:AddButton({
+	Name = "Spawn",
+	Default = false,
+	Callback = function(Value)
+		local player = game.Players.LocalPlayer.Character.HumanoidRootPart
+		player.CFrame = CFrame.new(Vector3.new(4673.36328, 327.236755, -6146.5415, 1, 7.78220084e-08, -1.31686437e-13, -7.78220084e-08, 1, -6.08463466e-08, 1.26951252e-13, 6.08463466e-08, 1))
+	end
+})
+
+Tab:AddButton({
+	Name = "Bee World",
+	Default = false,
+	Callback = function(Value)
+		local player = game.Players.LocalPlayer.Character.HumanoidRootPart
+		player.CFrame = CFrame.new(Vector3.new(6090.59424, 346.308807, -4652.49902, 1, 5.09363751e-09, -1.549479e-13, -5.09363751e-09, 1, -3.98280253e-09, 1.54927612e-13, 3.98280253e-09, 1))
+	end
+})
+
+local Section = Tab:AddSection({
 	Name = "Events"
 })
 
@@ -385,5 +407,14 @@ Tab:AddButton({
 	Callback = function(Value)
 		local player = game.Players.LocalPlayer.Character.HumanoidRootPart
 		player.CFrame = CFrame.new(Vector3.new(3572.28638, -160.177383, 389.419617, 1, 0, 0, 0, 1, 0, 0, 0, 1))
+	end
+})
+
+Tab:AddButton({
+	Name = "Meme Event",
+	Default = false,
+	Callback = function(Value)
+		local player = game.Players.LocalPlayer.Character.HumanoidRootPart
+		player.CFrame = CFrame.new(Vector3.new(8352.24902, 334.849365, -2225.8252, 1, 0, 0, 0, 1, 0, 0, 0, 1))
 	end
 })
